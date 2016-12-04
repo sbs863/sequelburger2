@@ -19,12 +19,10 @@ module.exports = function(sequelize, DataTypes) {
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: Sequelize.NOW
-    },
+      },
     updatedAt: {
       type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: Sequelize.NOW
+      allowNull: false,   
     }
   }, {
     tableName: 'burgers'

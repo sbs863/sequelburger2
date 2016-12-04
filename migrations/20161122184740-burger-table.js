@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-    up: function(queryInterface, Sequelize) {
+    up: function (queryInterface, Sequelize) {
         /*
           Add altering commands here.
           Return a promise to correctly handle asynchronicity.
@@ -19,21 +19,24 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false
             },
-            devoured: Sequelize.BOOLEAN,
+            devoured: {
+                type: Sequelize.BOOLEAN,
+                defaultValue: false,
+            },
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
-               
+
             },
             updatedAt: {
                 allowNull: false,
                 type: Sequelize.DATE,
-               
+
             }
         });
     },
 
-    down: function(queryInterface, Sequelize) {
+    down: function (queryInterface, Sequelize) {
         /*
           Add reverting commands here.
           Return a promise to correctly handle asynchronicity.
